@@ -27,4 +27,5 @@ def parse():
     p.add_argument('--nostdout', action="store_true",  help='do not output logging to terminal')
     p.add_argument('--split', type=int, default=1,  help='choose which train/test split to use')
     p.add_argument('--out-dir', type=str, default='runs/test',  help='output dir')
-    return p.parse_args()
+    p, _ = p.parse_known_args()
+    return p
